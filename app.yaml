@@ -1,15 +1,14 @@
 runtime: php55
 
 handlers:
-- url: /styles
-  static_dir: styles
-  
-- url: /images/(.*\.(gif|png|jpg))
-  static_files: images/\1
-  upload: images/(.*\.(gif|png|jpg))
 
-- url: /css/
-  script: style.css
+- url: /img/(.*\.(gif|png|jpg))
+  static_files: img/\1
+  upload: img/(.*\.(gif|png|jpg))
+
+- url: /css/(.*\.(css))
+  static_files: css/\1
+  upload: css/(.*\.(css))
 
 - url: /.*
   script: index.html
